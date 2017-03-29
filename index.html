@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="IE=11">
+  <meta name="author" content="Kyushu University">
+  <meta name="copyright" content="(c) 2017 Kyushu University">
+  <title>iRobot Create2 Control</title>
+  <link rel="stylesheet" href="css/pure-min.css">
+  <link rel="stylesheet" href="css/my.css">
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/grids-responsive-min.css">
+  <!--<![endif]-->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/mqttws31.js"></script>
+</head>
+<body>
+<div class="main">
+  <div class="content">
+    <h1>iRobot Create2 Control</h1>
+    <table>
+      <tr>
+        <td></td>
+        <td><button class="pure-button" id="ctrl_forward"><div class="button_text ctrl_button_text">↑</div></button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button class="pure-button" id="ctrl_left"><div class="button_text ctrl_button_text">←</div></button></td>
+        <td><button class="pure-button" id="ctrl_stop"><div class="button_text ctrl_button_text">■</div></button></td>
+        <td><button class="pure-button" id="ctrl_right"><div class="button_text ctrl_button_text">→</div></button></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button class="pure-button" id="ctrl_back"><div class="button_text ctrl_button_text">↓</div></button></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <div class="content">
+    <div class="status_message" id="message_container">Control: none</div>
+    <div class="status_message" id="connection_status">Connection</div>
+  </div>
+  <div class="content hide" id="reconnect_button">
+    <button class="pure-button" id="reconnect"><div class="button_text">Reconnect</div></button>
+  </div>
+</div>
+</body>
+<script src="js/mqtt_client.js"></script>
+</html>
