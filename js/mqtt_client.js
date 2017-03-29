@@ -96,10 +96,20 @@ $(function(){
     connect();
 
     // handle button clicks
-    $("#ctrl_forward").click(ctrl_send("forward"));
-    $("#ctrl_left").click(ctrl_send("left"));
-    $("#ctrl_stop").click(ctrl_send("stop"));
-    $("#ctrl_right").click(ctrl_send("right"));
-    $("#ctrl_back").click(ctrl_send("back"));
+    $("#ctrl_forward").click(function() {
+        ctrl_send("forward")
+    });
+    $("#ctrl_left").click(function() {
+        ctrl_send("left")
+    });
+    $("#ctrl_stop").click(function() {
+        ctrl_send("stop")
+    });
+    $("#ctrl_right").click(function() {
+        ctrl_send("right")
+    });
+    $("#ctrl_back").click(function() {
+        ctrl_send("back")
+    });
     $("#reconnect").click(connect);
 });
